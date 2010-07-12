@@ -2,7 +2,7 @@
 %define name	vaapi-driver-vdpau
 %define oname	vdpau-video
 %define version	0.6.10
-%define rel	1
+%define rel	2
 
 Summary:	VA-API driver for VDPAU interface
 Name:		%{name}
