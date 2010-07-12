@@ -14,6 +14,7 @@ URL:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/
 Source:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/%{oname}-%{version}.tar.gz
 BuildRequires:	libva-devel
 BuildRequires:	vdpau-devel
+Provides:	%oname
 
 %description
 VDPAU driver backend for VA API, a video acceleration API.
