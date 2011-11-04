@@ -4,7 +4,7 @@ Name:		vdpau-video
 Summary:	VA-API driver for VDPAU interface
 Group:		Video
 Version:	0.7.3
-Release:1
+Release:	%mkrel 1
 License:	GPLv2+
 URL:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/
 Source0:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/%{oname}-%{version}.tar.gz
