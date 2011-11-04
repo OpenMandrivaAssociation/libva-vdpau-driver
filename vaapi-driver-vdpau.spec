@@ -4,14 +4,14 @@ Name:		vaapi-driver-vdpau
 Summary:	VA-API driver for VDPAU interface
 Group:		Video
 Version:	0.7.3
-Release:	%mkrel 1
+Release:1
 License:	GPLv2+
 URL:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/
 Source0:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/%{oname}-%{version}.tar.gz
 # fix build with recent mesa (not a technically correct fix):
 BuildRequires:	libva-devel
 BuildRequires:	vdpau-devel
-Provides:	%oname
+Provides:	%{oname} = %{version}-%{release}
 
 %description
 VDPAU driver backend for VA API, a video acceleration API.
