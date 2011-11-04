@@ -1,7 +1,7 @@
 
 %define name	vaapi-driver-vdpau
 %define oname	vdpau-video
-%define version	0.7.2
+%define version	0.7.3
 %define rel	1
 
 Summary:	VA-API driver for VDPAU interface
@@ -23,7 +23,6 @@ VDPAU driver backend for VA API, a video acceleration API.
 
 %prep
 %setup -q -n %oname-%version
-%apply_patches
 
 %build
 %configure2_5x
@@ -33,7 +32,7 @@ VDPAU driver backend for VA API, a video acceleration API.
 rm -rf %{buildroot}
 %makeinstall_std
 
-rm -f %{buildroot}%{_libdir}/va/drivers/*.la
+rm -f %{buildroot}%{_libdir}/dri/*.la
 
 %clean
 rm -rf %{buildroot}
@@ -41,4 +40,4 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc AUTHORS NEWS
-%{_libdir}/va/drivers/*_drv_video.so
+%{_libdir}/dri/*_drv_video.so
