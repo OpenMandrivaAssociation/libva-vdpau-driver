@@ -9,7 +9,7 @@ License:	GPLv2+
 URL:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/
 Source0:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/%{oname}-%{version}.tar.gz
 # fix build with recent mesa (not a technically correct fix):
-BuildRequires:	libva-devel
+BuildRequires:	libva-devel => 1.0.15
 BuildRequires:	vdpau-devel
 Provides:	%{oname} = %{version}-%{release}
 
@@ -30,4 +30,4 @@ rm -f %{buildroot}%{_libdir}/va/drivers/*.la
 
 %files
 %doc AUTHORS NEWS
-%{_libdir}/va/drivers/*_drv_video.so
+%{_libdir}/dri/*_drv_video.so
