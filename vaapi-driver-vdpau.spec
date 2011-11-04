@@ -1,6 +1,6 @@
 %define oname	vdpau-video
 
-Name:		vdpau-video
+Name:		vaapi-driver-vdpau
 Summary:	VA-API driver for VDPAU interface
 Group:		Video
 Version:	0.7.3
