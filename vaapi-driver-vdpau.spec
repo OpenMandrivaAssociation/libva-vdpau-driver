@@ -26,7 +26,7 @@ VDPAU driver backend for VA API, a video acceleration API.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-rm -f %{buildroot}%{_libdir}/va/drivers/*.la
+rm -f %{buildroot}%{_libdir}/dri/*.la
 
 %files
 %doc AUTHORS NEWS
