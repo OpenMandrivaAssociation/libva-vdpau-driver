@@ -1,23 +1,27 @@
-%define oname	vdpau-video
+%define oname	libva-vdpau-driver
 
 Name:		vaapi-driver-vdpau
 Summary:	VA-API driver for VDPAU interface
 Group:		Video
-Version:	0.7.3
-Release:3
+Version:	0.7.4
+Release:	1
 License:	GPLv2+
-URL:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/
-Source0:		http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/%{oname}-%{version}.tar.gz
+URL:		http://www.freedesktop.org
+Source0:	http://www.freedesktop.org/software/vaapi/releases/libva-vdpau-driver/libva-vdpau-driver-%{version}.tar.bz2
 # fix build with recent mesa (not a technically correct fix):
-BuildRequires:	libva-devel => 1.0.15
-BuildRequires:	vdpau-devel
+BuildRequires:	pkgconfig(libva)
+BuildRequires:	pkgconfig(vdpau)
 Provides:	%{oname} = %{version}-%{release}
+Provides:	vdpau-video = %{version}-%{release}
+
+Patch0:		PFNGLMULTITEXCOORD2FPROC_vaapi-driver-vdpau.patch
 
 %description
 VDPAU driver backend for VA API, a video acceleration API.
 
 %prep
-%setup -qn %oname-%version
+%setup -qn %{oname}-%{version}/
+%patch0 -p1
 
 %build
 %configure2_5x
