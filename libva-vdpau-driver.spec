@@ -11,7 +11,7 @@ Patch0:		PFNGLMULTITEXCOORD2FPROC_vaapi-driver-vdpau.patch
 Patch1:		libva-vdpau-driver-0.7.4-drop-h264-api.patch
 # API changes: http://cgit.freedesktop.org/~aplattner/libvdpau/commit/?id=186195b1a84f2517205522e7ab8e0f62ad61c329
 Patch2:		libva-vdpau-driver-0.7.4-libvdpau0.8.patch
-BuildRequires:	pkgconfig(libva) >= 1.2.0
+BuildRequires:	pkgconfig(libva)
 BuildRequires:	pkgconfig(vdpau)
 Provides:	vdpau-video = %{version}-%{release}
 %rename		vaapi-driver-vdpau
