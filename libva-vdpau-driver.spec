@@ -20,7 +20,7 @@ Provides:	vdpau-video = %{version}-%{release}
 VDPAU driver backend for VA API, a video acceleration API.
 
 %prep
-%setup -qn %{oname}-%{version}/
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
