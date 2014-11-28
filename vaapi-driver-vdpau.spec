@@ -4,7 +4,7 @@ Name:		vaapi-driver-vdpau
 Summary:	VA-API driver for VDPAU interface
 Group:		Video
 Version:	0.7.4
-Release:	3
+Release:	4
 License:	GPLv2+
 URL:		http://www.freedesktop.org
 Source0:	http://www.freedesktop.org/software/vaapi/releases/libva-vdpau-driver/libva-vdpau-driver-%{version}.tar.bz2
@@ -15,20 +15,23 @@ Provides:	%{oname} = %{version}-%{release}
 Provides:	vdpau-video = %{version}-%{release}
 
 Patch0:		PFNGLMULTITEXCOORD2FPROC_vaapi-driver-vdpau.patch
+Patch1:		mesa-drivers.patch
+Patch2:		sigfpe-crash.patch
+Patch3:		libva-vdpau-driver-0.7.4-drop-h264-api.patch
 
 %description
 VDPAU driver backend for VA API, a video acceleration API.
 
 %prep
 %setup -qn %{oname}-%{version}/
-%patch0 -p1
+%apply_patches
 
 %build
+autoreconf -fiv
 %configure2_5x
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 rm -f %{buildroot}%{_libdir}/dri/*.la
 
