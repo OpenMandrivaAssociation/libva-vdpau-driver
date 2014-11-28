@@ -1,0 +1,17 @@
+Description: Enable nouveau VDPAU driver
+ mesa now supports VDPAU for nouveau, r600 and radeonsi.
+Origin: http://lists.freedesktop.org/archives/libva/2014-July/002515.html
+Bug-Debian: http://bugs.debian.org/757370
+Last-Update: 2014-08-07
+
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -1,5 +1,8 @@
+ DRIVERS  = nvidia
+ DRIVERS += s3g	# native VA-API driver is too old, so use VDPAU based one
++DRIVERS += nouveau
++DRIVERS += radeonsi
++DRIVERS += r600
+ 
+ INCLUDES = \
+ 	$(VDPAU_VIDEO_CFLAGS)
