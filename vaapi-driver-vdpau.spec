@@ -18,6 +18,7 @@ Patch0:		PFNGLMULTITEXCOORD2FPROC_vaapi-driver-vdpau.patch
 Patch1:		mesa-drivers.patch
 Patch2:		sigfpe-crash.patch
 Patch3:		libva-vdpau-driver-0.7.4-drop-h264-api.patch
+Patch4:		vdpau.patch
 
 %description
 VDPAU driver backend for VA API, a video acceleration API.
