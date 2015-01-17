@@ -2,7 +2,7 @@ Summary:	VA-API driver for VDPAU interface
 Name:		libva-vdpau-driver
 Group:		Video
 Version:	0.7.4
-Release:	11
+Release:	12
 License:	GPLv2+
 URL:		http://www.freedesktop.org/wiki/Software/vaapi/
 Source0:	http://www.freedesktop.org/software/vaapi/releases/%{name}/%{name}-%{version}.tar.bz2
