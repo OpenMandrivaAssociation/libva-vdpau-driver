@@ -23,7 +23,7 @@ VDPAU driver backend for VA API, a video acceleration API.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 autoreconf -fiv
