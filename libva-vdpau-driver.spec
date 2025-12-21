@@ -13,6 +13,11 @@ Patch1:		libva-vdpau-driver-0.7.4-drop-h264-api.patch
 Patch2:		libva-vdpau-driver-0.7.4-libvdpau0.8.patch
 Patch3:		mesa-drivers.patch
 Patch4:		sigfpe-crash.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libva)
 BuildRequires:	pkgconfig(vdpau)
 Provides:	vdpau-video = %{version}-%{release}
